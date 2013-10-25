@@ -1,13 +1,16 @@
 
 Animated Border Menus
 =========
+
+**N.B.** This is a version adapted to [AngularJS](http://angularjs.org), for the original see [codrops/AnimatedBorderMenus](https://github.com/codrops/AnimatedBorderMenus).
+
 A tutorial on how to create a off-canvas icon navigation with an animated border effect.
 
 [Article on Codrops](http://tympanus.net/codrops/?p=16556)
 
 [Demo](http://tympanus.net/Tutorials/AnimatedBorderMenus/)
 
-Integrate or build upon it for free in your personal or commercial projects. Don't republish, redistribute or sell "as-is". 
+Integrate or build upon it for free in your personal or commercial projects. Don't republish, redistribute or sell "as-is".
 
 [License](http://tympanus.net/codrops/licensing/)
 
