@@ -2,8 +2,8 @@
 <html lang="en" class="no-js">
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Animated Border Menus | Demo 4</title>
 		<meta name="description" content="Responsive Animated Border Menus with CSS Transitions" />
 		<meta name="keywords" content="navigation, menu, responsive, border, overlay, css transition" />
@@ -15,7 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style4.css" />
 		<script src="js/modernizr.custom.js"></script>
 	</head>
-	<body>
+	<body ng-app="AnimatedBorderMenus" ng-controller="NavCtrl">
 		<div class="container">
 			<header class="codrops-header">
 				<h1>Animated Border Menus <span>Inspired by CreativeDash's <a href="http://creativeda.sh/sandbox/bounce_menu/">bounce menu</a></h1>
@@ -35,8 +35,8 @@
 					<a href="http://tympanus.net/Development/SidebarTransitions/">Transitions for Off-canvas Navigations</a>
 				</div>
 			</header>
-			<nav id="bt-menu" class="bt-menu">
-				<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+			<nav id="bt-menu" ng-class="{'bt-menu-open': isOpen, 'bt-menu-close': !isOpen}" class="bt-menu">
+				<a href="#" ng-click="toggle()" class="bt-menu-trigger"><span>Menu</span></a>
 				<ul>
 					<li><a href="#" class="bt-icon icon-browser">Browser</a></li>
 					<li><a href="#" class="bt-icon icon-email">Email</a></li>
@@ -49,9 +49,11 @@
 					<li><a href="#" class="bt-icon icon-file-add">Add</a></li>
 					<li><a href="#" class="bt-icon icon-trash">Delete</a></li>
 				</ul>
+				<div ng-if="isOpen" class="bt-overlay" ng-click="close()"></div>
 			</nav>
 		</div><!-- /container -->
 	</body>
-	<script src="js/classie.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.3/angular.min.js"></script>
+	<script src="http://code.angularjs.org/1.2.0-rc.3/angular-touch.min.js"></script>
 	<script src="js/borderMenu.js"></script>
 </html>
